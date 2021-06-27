@@ -1,2 +1,1 @@
-from main.models.choice import *
-from main.models.question import *
+from main.models.gl_account import *

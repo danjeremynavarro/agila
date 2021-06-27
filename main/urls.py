@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import index
+from main.auth import auth_sucess
 
+print("test")
 urlpatterns = [
-    path('', index)
+    path('', auth_sucess)
 ]
