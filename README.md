@@ -2,5 +2,5 @@
 web application made with django as backend and react as front-end
 
 
-##Functions:
+## Functions:
 - Basic Bookkeeping
