@@ -5,10 +5,10 @@ class GlAccount(models.Model):
     """
     https://www.accountingcoach.com/debits-and-credits/explanation
     """
-    ASSETS = "A"
-    LIABILITIES = "L"
-    REVENUES = "R"
-    EXPENSES = "E"
+    ASSETS = "AS"
+    LIABILITIES = "LI"
+    REVENUES = "RE"
+    EXPENSES = "EX"
     EQUITY = "EQ"
     NONE = "N/A"
 
@@ -21,10 +21,9 @@ class GlAccount(models.Model):
         (NONE, "None")
     ]
 
-    _account_number = models.IntegerField(primary_key=True)
-    _account_name = models.TextField()
-    account_code = models.CharField(max_length=4, choices=TYPE, default=NONE)
-    account_description = models.TextField()
+    _account_name = models.CharField(max_length=32)
+    account_code = models.CharField(primary_key=True, max_length=4, choices=TYPE, default=NONE)
+    account_description = models.TextField(blank=True)
     is_debit = models.BooleanField()  # If True the normal value is debit
     is_a_parent = models.BooleanField(default=False)  # Use as anchor
     parent = models.BigIntegerField(blank=True)  # Points to another account
