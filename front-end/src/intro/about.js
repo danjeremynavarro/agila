@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import Section from './section';
 import Summary from './summary';
+import { MDBBtn } from 'mdb-react-ui-kit';
 
 export default class About extends React.Component{
     
@@ -14,8 +14,8 @@ export default class About extends React.Component{
                     to full stack development. I'm a naturally curious individual with a go-getter attitude. I believe in getting things done quick and the right way! You can read more about me by scrolling down.
                 </p>
                 <hr className="my-4"></hr>
-                <a className="btn btn-primary m-2" href="https://www.linkedin.com/in/dan-jeremy-navarro-a075bb13a/">LinkedIn</a>
-                <a className="btn btn-primary m-2" href="https://github.com/danjeremynavarro">Github</a>
+                <MDBBtn href="https://www.linkedin.com/in/dan-jeremy-navarro-a075bb13a/" color="primary" className="m-2">LinkedIn</MDBBtn>
+                <MDBBtn href="https://github.com/danjeremynavarro/" color="primary" className="m-2">Github</MDBBtn>
             </div>
         )
     }
